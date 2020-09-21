@@ -1,15 +1,13 @@
 import React from 'react'
+import {Action} from '../actions'
 
-interface NotesState{
+export interface NotesState{
     notes: string[]
 }
 
 const initialState = {
     notes: []
 }
-
-type Action = {type: "ADD_NOTE" , payload: string}
-
 
 
 export const noteReducer = (state: NotesState = initialState, action:Action) => {
